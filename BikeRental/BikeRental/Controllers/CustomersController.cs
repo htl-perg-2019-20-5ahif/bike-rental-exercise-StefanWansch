@@ -98,6 +98,7 @@ namespace BikeRental_API.Controllers
             return customer;
         }
 
+        [HttpGet("/rentals")]
         public async Task<ActionResult<IEnumerable<Rental>>> GetRentalsOfCustomer(int id)
         {
             var customer = await _context.Customers.FindAsync(id);

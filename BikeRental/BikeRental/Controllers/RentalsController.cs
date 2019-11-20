@@ -28,8 +28,8 @@ namespace BikeRental_API.Controllers
             return await _context.Rentals.ToListAsync();
         }
 
-        // GET: api/Rentals/5
-        [HttpGet("{id}")]
+        // GET: api/Rentals/Unpaid
+        [HttpGet("/Unpaid")]
         public async Task<List<UnpaidRental>> GetUnpaidRental()
         {
             List<UnpaidRental> unpaidRentals = new List<UnpaidRental>();
